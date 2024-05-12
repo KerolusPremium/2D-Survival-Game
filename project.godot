@@ -14,6 +14,15 @@ config/name="2D survival game"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[file_customization]
+
+folder_colors={
+"res://assets/": "blue",
+"res://inventory/": "orange",
+"res://scenes/": "gray",
+"res://scripts/": "green"
+}
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
