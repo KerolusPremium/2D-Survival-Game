@@ -24,6 +24,7 @@ patch_margin_right = 6
 patch_margin_bottom = 6
 
 [node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
+z_index = 1000
 layout_mode = 0
 offset_left = 4.0
 offset_top = 4.0
