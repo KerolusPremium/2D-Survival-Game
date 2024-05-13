@@ -10,7 +10,7 @@ func _ready():
 	updateSlots()
 
 func _process(delta):
-	inv.update.connect(updateSlots)
+	#inv.update.connect(updateSlots)
 	updateSlots()
 
 func updateSlots():
