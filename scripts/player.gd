@@ -2,7 +2,12 @@ extends CharacterBody2D
 
 @export var speed = 100
 
+@export var inv: Inv
+
 var playerState
+
+func  _ready():
+	hideText()
 
 func _physics_process(delta):
 	var direction = Input.get_vector("left", "right", "up", "down")
@@ -45,3 +50,16 @@ func playAnimation(dir):
 
 func player():
 	pass
+
+func collect(item):
+	inv.insert(item)
+
+func showText(text: String):
+	var Text = $camera/Label
+	Text.text = text
+	Text.visible = true
+
+func hideText():
+	var Text = $camera/Label
+	Text.text = ""
+	Text.visible = false

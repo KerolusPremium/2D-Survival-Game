@@ -12,6 +12,9 @@ extends Node2D
 var isPlayerInArea = false
 
 var apple = preload("res://scenes/droppedItems/apple.tscn")
+var player = null
+
+@export var item: invItem
 
 func setState(newState: int):
 	if newState >= 3 or newState < 0:
@@ -48,11 +51,14 @@ func _process(delta):
 func _on_area_2d_body_entered(body):
 	if body.has_method("player"):
 		isPlayerInArea = true
+		player = body
+		player.showText("Press E to Drop Apple")
 
 
 func _on_area_2d_body_exited(body):
 	if body.has_method("player"):
 		isPlayerInArea = false
+		body.hideText()
 
 
 func _on_apple_growth_timeout():
@@ -69,6 +75,6 @@ func dropApple():
 	var appleInstance = apple.instantiate()
 	appleInstance.global_position = $Marker2D.global_position
 	get_parent().add_child(appleInstance)
-	
+	player.collect(item)
 	await get_tree().create_timer(3).timeout
 	apple_growth.start()

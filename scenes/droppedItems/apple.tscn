@@ -104,6 +104,8 @@ _data = {
 script = ExtResource("1_3xf60")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 19)
+rotation = 0.471239
 sprite_frames = SubResource("SpriteFrames_01g6a")
 animation = &"apple"
 
