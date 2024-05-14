@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://lh6p6vx7mp1j" path="res://inventory/slot.tscn" id="2_w2w7j"]
 
 [node name="toolbox" type="Control"]
+z_index = 1000
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
